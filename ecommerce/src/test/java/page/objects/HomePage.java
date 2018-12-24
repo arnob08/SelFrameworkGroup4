@@ -12,25 +12,29 @@ public class HomePage extends BrowserDriver {
 
    // private WebDriver driver;
 
-    @FindBy(how = How.ID, using = "search_query_top")
+    @FindBy(id = "chrome-search")
     private WebElement searchBox;
 
-    @FindBy(how = How.PARTIAL_LINK_TEXT, partialLinkText = "Contact us")
-    private WebElement contactUs;
+    @FindBy(xpath = "//p[text()='Mennace harrington bomber jacket in red']")
+    private WebElement actualText;
 
-    public void clickContactUs(){
+    @FindBy(linkText = "Help & FAQs")
+    private WebElement helpAndFAQs;
 
-        contactUs.click();
 
-    }
     public String search (){
 
-        searchBox.sendKeys("Shoes", Keys.ENTER);
-        String actualText = driver.findElement(By.partialLinkText("Printed Chiffon Dress")).getText();
-
-      return actualText;
+        searchBox.sendKeys("Jackets", Keys.ENTER);
+        String maroonJacket = actualText.getText();
+        return maroonJacket;
 
     }
+
+    public void helpAndFAQs(){
+
+        helpAndFAQs.click();
+    }
+
 
 
 }

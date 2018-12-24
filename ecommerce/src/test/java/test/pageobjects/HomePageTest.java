@@ -8,7 +8,7 @@ import page.objects.HomePage;
 
 public class HomePageTest extends HomePage {
 
-   HomePage objOfHomePage = null;
+   HomePage objOfHomePage;
 
     @BeforeMethod
     public void initializationOfElements() {
@@ -19,12 +19,10 @@ public class HomePageTest extends HomePage {
     @Test
     public void searchTest (){
 
-        String actualText = objOfHomePage.search();
-        Assert.assertEquals(actualText, "Printed Chiffon Dress");
-        System.out.println("Search Test Passed");
-
+        String actualText =objOfHomePage.search();
+        Assert.assertEquals(actualText,"Mennace harrington bomber jacket in red");
+        System.out.println("test passed");
     }
-
 
 
 }

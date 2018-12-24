@@ -6,18 +6,19 @@
     <!--<parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>-->
 
-    <parameter name="os" value="Mac"/>
+    <parameter name="os" value="windows"/>
     <parameter name="os_version" value="10"/>
-    <parameter name="browserName" value="firefox"/>
+    <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="62.0"/>
-    <parameter name="url" value="http://automationpractice.com"/>
+    <parameter name="url" value= "https://us.asos.com"/>
 
 
-<test name = "Ecommerce Home">
+<test name = "Retail Home">
+
     <classes>
 
         <class name="test.pageobjects.HomePageTest"/>
-        <class name="test.pageobjects.ContactUsPageTest"/>
+        <!--<class name="test.pageobjects.ContactUsPageTest"/>-->
 
 
     </classes>
