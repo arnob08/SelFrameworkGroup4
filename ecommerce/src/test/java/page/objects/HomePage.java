@@ -22,12 +22,12 @@ public class HomePage extends BrowserDriver {
     private WebElement helpAndFAQs;
 
 
-    public String search (){
+
+    public String search () {
 
         searchBox.sendKeys("Jackets", Keys.ENTER);
         String maroonJacket = actualText.getText();
         return maroonJacket;
-
     }
 
     public void helpAndFAQs(){

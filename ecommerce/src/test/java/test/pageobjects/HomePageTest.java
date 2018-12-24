@@ -16,6 +16,7 @@ public class HomePageTest extends HomePage {
         objOfHomePage = PageFactory.initElements(driver, HomePage.class);
     }
 
+
     @Test
     public void searchTest (){
 
@@ -23,6 +24,5 @@ public class HomePageTest extends HomePage {
         Assert.assertEquals(actualText,"Mennace harrington bomber jacket in red");
         System.out.println("test passed");
     }
-
 
 }
