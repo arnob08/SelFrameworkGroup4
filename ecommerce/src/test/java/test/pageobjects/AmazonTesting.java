@@ -19,29 +19,39 @@ public class AmazonTesting extends AmazonHomePage {
     @Test
     public void searchboxTest() {
 
-       objOfAmazon.orders();
+        objOfAmazon.orders();
 
         System.out.println("searchBox test passed");
     }
 
-  @Test
-    public  void yourAmazon(){
-      String getText = objOfAmazon.contactUs();
-      Assert.assertEquals(getText, "Your Amazon.com");
-      System.out.println("Amazon Test Passed");
+    @Test
+    public void yourAmazon() {
+        String getText = objOfAmazon.contactUs();
+        Assert.assertEquals(getText, "Your Amazon.com");
+        System.out.println("Amazon Test Passed");
     }
 
     @Test
-    public void lastMinuteDeal(){
+    public void lastMinuteDeal() {
         String dealText = objOfAmazon.lastMinuteDael();
         Assert.assertEquals(dealText, "Year-End Deals");
         System.out.println("last minute passed");
     }
 
     @Test
-    public void GiftCardTest(){
+    public void GiftCardTest() {
         String actualtext = objOfAmazon.giftCards();
-        Assert.assertEquals(actualtext,"Gift Cards");
+        Assert.assertEquals(actualtext, "Gift Cards");
         System.out.println("Gift card passed");
     }
+
+    @Test
+    public void logoTest(){
+
+        boolean logo = objOfAmazon.logoDisplayTest();
+        Assert.assertEquals(logo,false);
+        System.out.println("logo test passed");
+    }
 }
+
+

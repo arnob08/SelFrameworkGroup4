@@ -1,16 +1,10 @@
 package page.objects;
 
 import base.BrowserDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.beans.PropertyChangeListener;
 
 public class AmazonHomePage extends BrowserDriver {
 
@@ -33,6 +27,8 @@ public class AmazonHomePage extends BrowserDriver {
     @FindBy(xpath = "//*[@id=\"nav-link-accountList\"]/span[2]")
     private WebElement accountList;
 
+    @FindBy(xpath = "//*[@id=\"nav-logo\"]/a[1]/span[1]")
+    private WebElement logoDisplay;
 
     public String contactUs() {
 
@@ -75,6 +71,11 @@ public class AmazonHomePage extends BrowserDriver {
         act.moveToElement(accountList).perform();
 
     }
+public boolean logoDisplayTest(){
 
+ logoDisplay.isDisplayed();
+
+return false;
+}
 
 }
