@@ -1,6 +1,7 @@
 package page.objects;
 
 import base.BrowserDriver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,7 @@ public class AmazonHomePage extends BrowserDriver {
     @FindBy(how = How.CLASS_NAME, using = "nav-line-2")
     private WebElement orders;
 
-    @FindBy(how = How.ID, using = " twotabsearchtextbox")
+    @FindBy(xpath = "//*[@id=\"twotabsearchtextbox\"]")
     private WebElement search;
 
     @FindBy(how = How.ID, using = "nav-your-amazon")
@@ -29,6 +30,9 @@ public class AmazonHomePage extends BrowserDriver {
 
     @FindBy(xpath = "//*[@id=\"nav-logo\"]/a[1]/span[1]")
     private WebElement logoDisplay;
+
+    @FindBy(xpath = "//*[@id=\"nav-upnav\"]/a")
+    private WebElement topLogoDisplay;
 
     public String contactUs() {
 
@@ -71,11 +75,24 @@ public class AmazonHomePage extends BrowserDriver {
         act.moveToElement(accountList).perform();
 
     }
-public boolean logoDisplayTest(){
 
- logoDisplay.isDisplayed();
+    public boolean logoDisplay(){
 
-return false;
+    logoDisplay.isDisplayed();
+
+    return false;
+    }
+
+    public boolean topLogoDisplay(){
+
+      topLogoDisplay.isDisplayed();
+
+      return true;
+    }
+
+public void searchItem(){
+        search.sendKeys("shoes", Keys.ENTER);
+
 }
 
 }

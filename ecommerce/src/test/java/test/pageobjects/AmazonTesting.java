@@ -48,9 +48,16 @@ public class AmazonTesting extends AmazonHomePage {
     @Test
     public void logoTest(){
 
-        boolean logo = objOfAmazon.logoDisplayTest();
+        boolean logo = objOfAmazon.logoDisplay();
         Assert.assertEquals(logo,false);
         System.out.println("logo test passed");
+    }
+
+    @Test
+    public void topLogoDisplayTesting(){
+        boolean topLogo = objOfAmazon.topLogoDisplay();
+        Assert.assertEquals(topLogo,true);
+        System.out.println("Top logo passed");
     }
 }
 

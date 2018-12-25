@@ -16,10 +16,16 @@
 <test name = "Ecommerce Home">
     <classes>
 
+
         <class name="test.pageobjects.AmazonTesting"/>
-        <class name="test.pageobjects.AcocuntListTesting"/>
         <class name="test.pageobjects.AmazonLastMinDealTesting"/>
+        <class name="test.pageobjects.AcocuntListTesting"/>
         <class name="test.pageobjects.GiftCardPageTest"/>
+        <class name="test.pageobjects.AmazonShoeListPage"/>
+
+
+
+
     </classes>
 
 
