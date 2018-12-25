@@ -10,32 +10,15 @@ import org.openqa.selenium.support.How;
 
 public class HomePage extends BrowserDriver {
 
-   // private WebDriver driver;
-
-    @FindBy(id = "chrome-search")
+    @FindBy(id = "search-query")
     private WebElement searchBox;
 
-    @FindBy(xpath = "//p[text()='Mennace harrington bomber jacket in red']")
-    private WebElement actualText;
+    @FindBy(id = "etsy-logo")
+    private WebElement logo;
 
-    @FindBy(linkText = "Help & FAQs")
-    private WebElement helpAndFAQs;
-
-
-
-    public String search () {
-
-        searchBox.sendKeys("Jackets", Keys.ENTER);
-        String maroonJacket = actualText.getText();
-        return maroonJacket;
+    public void search () {
+        searchBox.sendKeys("dunder mifflin hat", Keys.ENTER);
     }
-
-    public void helpAndFAQs(){
-
-        helpAndFAQs.click();
-    }
-
-
 
 }
 

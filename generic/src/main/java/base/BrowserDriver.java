@@ -42,7 +42,7 @@ public class BrowserDriver {
             // options.setHeadless(true);
             options.addArguments("--start-maximized");
             options.addArguments("--ignore-certificate-errors");
-            options.addArguments("--incognito");
+//            options.addArguments("--incognito");
 
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -84,7 +84,7 @@ public class BrowserDriver {
     public void closeOut() {
         //driver.manage().deleteAllCookies();
 //        driver.quit();
-        driver.close();
+//        driver.close();
     }
 
     /**
