@@ -17,10 +17,10 @@
 
     <classes>
 
-        <!--<class name="test.pageobjects.HomePageTest"/>-->
-        <!--<class name="test.pageobjects.SearchResultPageTest"/>-->
-        <!--<class name="test.pageobjects.ProductPageTest"/>-->
-        <class name="test.pageobjects.RegisterTestPage"/>
+        <class name="test.pageobjects.HomePageTest"/>
+        <class name="test.pageobjects.SearchResultPageTest"/>
+        <class name="test.pageobjects.ProductPageTest"/>
+        <!--<class name="test.pageobjects.RegisterTestPage"/>-->
 
 
 
