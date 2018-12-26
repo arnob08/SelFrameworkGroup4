@@ -22,6 +22,6 @@ public class RegisterTestPage extends RegisterPage {
         objOfRegisterPage.enterEmail();
         objOfRegisterPage.enterFirstName();
         objOfRegisterPage.enterPassword();
-
+        objOfRegisterPage.clickRegister();
     }
 }

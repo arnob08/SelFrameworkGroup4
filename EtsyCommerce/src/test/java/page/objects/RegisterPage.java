@@ -21,6 +21,9 @@ public class RegisterPage extends BrowserDriver {
     @FindBy(id = "join_neu_password_field")
     private WebElement password;
 
+    @FindBy(xpath = "//button[contains(text(),'Register')]")
+    private WebElement registerButton;
+
     public void enterEmail (){
 
         Set<String> handles = driver.getWindowHandles();
@@ -30,8 +33,7 @@ public class RegisterPage extends BrowserDriver {
                 driver.switchTo().window(handle);
             }
         }
-
-        email.sendKeys("test@gmail.com",Keys.ENTER);
+        email.sendKeys("tester@gmail.com",Keys.ENTER);
     }
 
     public void enterFirstName (){
@@ -42,9 +44,16 @@ public class RegisterPage extends BrowserDriver {
     }
 
     public void enterPassword (){
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, 90);
         WebElement element = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.id("join_neu_password_field")));
-        password.sendKeys("#set123secret", Keys.ENTER);
+        password.sendKeys("#set123secretPassword", Keys.ENTER);
+    }
+
+    public void clickRegister (){
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebElement element = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Register')]")));
+        registerButton.click();
     }
 }
