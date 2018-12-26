@@ -17,7 +17,7 @@
 
     <classes>
 
-        <!--<class name="test.pageobjects.HomePageTest"/>-->
+        <class name="test.pageobjects.HomePageTest"/>
         <!--<class name="test.pageobjects.SearchResultPageTest"/>-->
         <class name="test.pageobjects.ProductPageTest"/>
 

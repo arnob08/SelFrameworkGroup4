@@ -25,7 +25,6 @@ public class SearchResultPageTest extends SearchResultPage {
     public void selectArtTest (){
         objOfHomePage.search();
         objOfSearchResultPage.selectHat();
-
     }
 
 }
