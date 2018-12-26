@@ -1,9 +1,12 @@
 package page.objects;
 
 import base.BrowserDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Set;
 
@@ -32,10 +35,16 @@ public class RegisterPage extends BrowserDriver {
     }
 
     public void enterFirstName (){
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebElement element = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.id("join_neu_first_name_field")));
         firstName.sendKeys("tester", Keys.ENTER);
     }
 
     public void enterPassword (){
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebElement element = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.id("join_neu_password_field")));
         password.sendKeys("#set123secret", Keys.ENTER);
     }
 }
