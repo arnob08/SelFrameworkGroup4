@@ -10,19 +10,20 @@
     <parameter name="os_version" value="10"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="62.0"/>
-    <parameter name="url" value="http://www.amazon.com"/>
+    <parameter name="url" value="https://www.amazon.com/"/>
 
 
 <test name = "Ecommerce Home">
     <classes>
 
 
-        <class name="test.pageobjects.AmazonTesting"/>
+
         <class name="test.pageobjects.AmazonLastMinDealTesting"/>
         <class name="test.pageobjects.AcocuntListTesting"/>
+        <class name="test.pageobjects.AmazonShoeListTesting"/>
+        <class name="test.pageobjects.AmazonTesting"/>
+        <class name="test.pageobjects.FooterListTesting"/>
         <class name="test.pageobjects.GiftCardPageTest"/>
-        <class name="test.pageobjects.AmazonShoeListPage"/>
-
 
 
 

@@ -30,9 +30,22 @@ public class GiftCardPageTest extends GiftCardsPage {
     }
 
 
+@Test
+    public void yourBalanceTest(){
+       objOfAmazonHomePage.clickGiftCards();
+       String actualText = objOfGiftCardPage.viewYourBalance();
+       Assert.assertEquals(actualText,"View Your Balance");
+    System.out.println("your balance passed");
 
+}
 
+@Test
+    public  void bitthdayTest(){
+       objOfAmazonHomePage.clickGiftCards();
+       String actualText = objOfGiftCardPage.birthdays();
+       Assert.assertEquals(actualText,"Birthdays");
+    System.out.println("Birthday Passed");
 
-
+}
 
 }

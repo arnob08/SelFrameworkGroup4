@@ -34,6 +34,11 @@ public class AmazonHomePage extends BrowserDriver {
     @FindBy(xpath = "//*[@id=\"nav-upnav\"]/a")
     private WebElement topLogoDisplay;
 
+    @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[5]")
+    private WebElement registry;
+
+
+
     public String contactUs() {
 
         String getText = yourAmzon.getText();
@@ -93,6 +98,14 @@ public class AmazonHomePage extends BrowserDriver {
 public void searchItem(){
         search.sendKeys("shoes", Keys.ENTER);
 
+
+
+
 }
+public void registry(){
+        registry.click();
+}
+
+
 
 }

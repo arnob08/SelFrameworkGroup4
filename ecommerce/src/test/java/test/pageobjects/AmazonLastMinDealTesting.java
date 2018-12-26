@@ -33,4 +33,20 @@ public class AmazonLastMinDealTesting extends LastMinuteDealPage {
         Assert.assertEquals(actualText,"Furniture");
     System.out.println("Furniture passed");
 }
+@Test
+    public void kitchenTest(){
+        objOfAmazonOfHomePage.clickLastMinuteDeal();
+        String actualText = objOfLastMinuteDealPage.kitchen();
+        Assert.assertEquals(actualText,"Kitchen");
+    System.out.println("Kitchen Passed");
+}
+@Test
+    public void electronicsTest(){
+        objOfAmazonOfHomePage.clickLastMinuteDeal();
+        String actualText = objOfLastMinuteDealPage.electronics();
+        Assert.assertEquals(actualText,"Electronics");
+    System.out.println("Electronics passed");
+}
+
+
 }
