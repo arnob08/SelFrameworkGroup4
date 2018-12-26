@@ -19,6 +19,9 @@ public class HomePage extends BrowserDriver {
     @FindBy(id = "catnav-primary-link-66")
     private WebElement dropDown;
 
+    @FindBy(id = "register")
+    private WebElement registerButton;
+
     public void search () {
         searchBox.sendKeys("dunder mifflin hat", Keys.ENTER);
     }
@@ -31,7 +34,10 @@ public class HomePage extends BrowserDriver {
     public void dropDownFunction (){
         Actions ele = new Actions(driver);
         ele.moveToElement(dropDown).build().perform();
+    }
 
+    public void register (){
+        registerButton.click();
     }
 
 }

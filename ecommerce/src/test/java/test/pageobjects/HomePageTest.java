@@ -29,8 +29,8 @@ public class HomePageTest extends HomePage {
         objOfHomePage.search();
     }
 
-//    @Test
-//    public void dropDownTest(){
-//        objOfHomePage.dropDownFunction();
-//    }
+    @Test
+    public void registerTest(){
+        objOfHomePage.register();
+    }
 }
