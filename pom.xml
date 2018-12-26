@@ -10,9 +10,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>AmazonCommerce</module>
-        <module>generic</module>
-        <module>EtsyCommerce</module>
+
     </modules>
 <dependencyManagement>
   <dependencies>
