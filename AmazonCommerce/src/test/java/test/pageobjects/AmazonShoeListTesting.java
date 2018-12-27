@@ -37,4 +37,3 @@ public class AmazonShoeListTesting extends AmazonShoesPage {
     }
 
 }
-
