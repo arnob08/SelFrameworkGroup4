@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.objects.AmazonHomePage;
+import reporting.TestLogger;
 
 public class AcocuntListTesting extends AmazonHomePage {
 
@@ -19,6 +20,7 @@ public class AcocuntListTesting extends AmazonHomePage {
 
     @Test
     public void accountListTesting(){
+        TestLogger.log("trying");
         objOfAmazonHomePage.accountList();
 
     }

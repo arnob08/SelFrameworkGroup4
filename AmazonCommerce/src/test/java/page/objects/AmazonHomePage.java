@@ -1,13 +1,18 @@
 package page.objects;
 
+import application.page.base.ApplicationPageBase;
 import base.BrowserDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AmazonHomePage extends BrowserDriver {
+public class AmazonHomePage extends ApplicationPageBase {
 
 
     @FindBy(how = How.CLASS_NAME, using = "nav-line-2")
@@ -37,7 +42,8 @@ public class AmazonHomePage extends BrowserDriver {
     @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[5]")
     private WebElement registry;
 
-
+    @FindBy(xpath = "//*[@id=\"nav-flyout-ya-newCust\"]")
+    private WebElement signIn;
 
     public String contactUs() {
 
@@ -78,6 +84,10 @@ public class AmazonHomePage extends BrowserDriver {
 
         Actions act = new Actions(driver);
         act.moveToElement(accountList).perform();
+        //WebDriverWait wait =new WebDriverWait(driver,30);
+      //  WebElement ele = wait.until(
+                //ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"nav-flyout-ya-newCust\"]"))
+      //  );
 
     }
 

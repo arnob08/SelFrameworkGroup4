@@ -83,7 +83,7 @@ public class BrowserDriver {
     @AfterMethod
     public void closeOut() {
         //driver.manage().deleteAllCookies();
-        driver.quit();
+        //driver.quit();
     }
 
     /**

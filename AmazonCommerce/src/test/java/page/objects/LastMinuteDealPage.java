@@ -1,11 +1,12 @@
 package page.objects;
 
+import application.page.base.ApplicationPageBase;
 import base.BrowserDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class LastMinuteDealPage extends BrowserDriver {
+public class LastMinuteDealPage extends ApplicationPageBase {
 
 
     @FindBy(how =How.CLASS_NAME,using = "a-section")

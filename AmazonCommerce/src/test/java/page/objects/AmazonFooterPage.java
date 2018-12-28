@@ -1,12 +1,13 @@
 package page.objects;
 
+import application.page.base.ApplicationPageBase;
 import base.BrowserDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class AmazonFooterPage  extends BrowserDriver {
+public class AmazonFooterPage  extends ApplicationPageBase {
 
     @FindBy(xpath = "//*[@id=\"navFooter\"]")
     private List <WebElement> amazonFooterList;

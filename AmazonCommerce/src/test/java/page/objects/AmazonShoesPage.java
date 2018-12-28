@@ -1,12 +1,13 @@
 package page.objects;
 
+import application.page.base.ApplicationPageBase;
 import base.BrowserDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class AmazonShoesPage extends BrowserDriver {
+public class AmazonShoesPage extends ApplicationPageBase {
 
 @FindBy(xpath = "//*[@id=\"sort\"]")
 private WebElement sortList;

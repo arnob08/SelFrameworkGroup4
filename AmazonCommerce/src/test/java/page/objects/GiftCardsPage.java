@@ -1,11 +1,12 @@
 package page.objects;
 
+import application.page.base.ApplicationPageBase;
 import base.BrowserDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class GiftCardsPage extends BrowserDriver {
+public class GiftCardsPage extends ApplicationPageBase {
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-subnav\"]/a[4]")
     private WebElement reedemGiftCard;
