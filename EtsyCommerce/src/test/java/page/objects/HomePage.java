@@ -37,6 +37,7 @@ public class HomePage extends BrowserDriver {
     }
 
     public void register (){
+
         registerButton.click();
     }
 

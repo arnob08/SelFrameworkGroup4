@@ -19,7 +19,7 @@ public class RegisterTestPage extends RegisterPage {
     @Test
     public void fillForm (){
         objOfHomePage.register();
-        objOfRegisterPage.enterEmail();
+        objOfRegisterPage.enterEmail("email1@gmail.com");
         objOfRegisterPage.enterFirstName();
         objOfRegisterPage.enterPassword();
         objOfRegisterPage.clickRegister();

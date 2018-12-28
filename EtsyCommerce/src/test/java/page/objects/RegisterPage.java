@@ -24,7 +24,7 @@ public class RegisterPage extends BrowserDriver {
     @FindBy(xpath = "//button[contains(text(),'Register')]")
     private WebElement registerButton;
 
-    public void enterEmail (){
+    public void enterEmail (String em){
 
         Set<String> handles = driver.getWindowHandles();
         String currentHandle = driver.getWindowHandle();
@@ -33,7 +33,7 @@ public class RegisterPage extends BrowserDriver {
                 driver.switchTo().window(handle);
             }
         }
-        email.sendKeys("tester@gmail.com",Keys.ENTER);
+        email.sendKeys(em,Keys.ENTER);
     }
 
     public void enterFirstName (){
