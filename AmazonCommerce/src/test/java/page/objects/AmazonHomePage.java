@@ -42,7 +42,7 @@ public class AmazonHomePage extends ApplicationPageBase {
     @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[5]")
     private WebElement registry;
 
-    @FindBy(xpath = "//*[@id=\"nav-flyout-ya-newCust\"]")
+    @FindBy(xpath = "//*[@id=\"a-autoid-0-announce\"]")
     private WebElement signIn;
 
     public String contactUs() {

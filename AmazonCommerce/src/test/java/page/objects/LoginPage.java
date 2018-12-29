@@ -8,16 +8,16 @@ import org.openqa.selenium.support.How;
 
 public class LoginPage extends ApplicationPageBase {
      private WebDriver driver ;
-    @FindBy(how = How.ID, id = "email")
+    @FindBy(xpath = "//*[@id=\"ap_email\"]")
     private WebElement emailBox;
 
-    @FindBy(how = How.ID, id = "passwd")
+    @FindBy(xpath = "//*[@id=\"ap_password\"]")
     private WebElement passwordBox;
 
     @FindBy(how = How.CLASS_NAME, css = "#center_column > div.alert.alert-danger > p")
     private WebElement errorMessage;
 
-    @FindBy(how = How.ID, id = "SubmitLogin")
+    @FindBy(xpath = "//*[@id=\"signInSubmit\"]")
     private WebElement submitButton;
 
     public LoginPage login(String email, String password){

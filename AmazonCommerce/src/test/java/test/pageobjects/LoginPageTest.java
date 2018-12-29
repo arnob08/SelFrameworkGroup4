@@ -1,6 +1,7 @@
 package test.pageobjects;
 
 import application.page.base.ApplicationPageBase;
+import com.util.xlsx.reader.MyDataReader;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -10,10 +11,11 @@ import page.objects.LoginPage;
 import reporting.TestLogger;
 import sheet.google.api.GoogleSheetReader;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
-
+import org.testng.annotations.DataProvider;
 
 public class LoginPageTest extends ApplicationPageBase {
 
@@ -32,7 +34,7 @@ public class LoginPageTest extends ApplicationPageBase {
     * Read Data from XLSX file
     *
     * */
-   /* @DataProvider(name="DP")
+   @DataProvider(name="DP")
     public Object[][] getTestData() throws Exception{
         File filepath = new File(System.getProperty("user.dir") +  "/testData/TestData.xlsx");
         MyDataReader dr = new MyDataReader();
@@ -54,7 +56,7 @@ public class LoginPageTest extends ApplicationPageBase {
         String actulText = objLoginPage.getErroMessage();
         Assert.assertEquals(actulText, expectedText);
 
-    }*/
+    }
     /*
     *
     * Read data from Google Sheet
