@@ -7,15 +7,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class GiftCardsPage extends ApplicationPageBase {
+    ApplicationPageBase objOfApplicationPageBase;
+
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-subnav\"]/a[4]")
-    private WebElement reedemGiftCard;
+    public WebElement reedemGiftCard;
 
     @FindBy(xpath = "//*[@id=\"nav-subnav\"]/a[5]")
-    private WebElement viewYourBalance;
+    public WebElement viewYourBalance;
 
     @FindBy(xpath = "//*[@id=\"nav-subnav\"]/a[3]")
-    private WebElement birthdays;
+    public WebElement birthdays;
 
     public String reedemGiftCard() {
     String actualText = reedemGiftCard.getText();
@@ -25,18 +27,15 @@ public class GiftCardsPage extends ApplicationPageBase {
     }
 
     public String viewYourBalance(){
-        String getText = viewYourBalance.getText();
+        String getText = objOfApplicationPageBase.getText(viewYourBalance,"View Your Balance");
         return getText;
 
     }
     public String birthdays(){
-        String getText= birthdays.getText();
+        String getText= objOfApplicationPageBase.getText(birthdays,"Birthday");
 
         return getText;
 
     }
-
-
-
 
 }

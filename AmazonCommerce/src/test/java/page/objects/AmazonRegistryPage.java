@@ -11,7 +11,7 @@ public class AmazonRegistryPage extends ApplicationPageBase {
 
 
     @FindBy(xpath = "//*[@id=\"contentGrid_395686\"]/div/div[3]/div[1]/div/div/a")
-private WebElement easyReturn;
+public WebElement easyReturn;
 
 
 public String easyReturn (){

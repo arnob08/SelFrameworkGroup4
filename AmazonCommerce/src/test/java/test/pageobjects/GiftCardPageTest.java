@@ -29,6 +29,7 @@ public class GiftCardPageTest extends GiftCardsPage {
 
     }
 
+/*
 
 @Test
     public void yourBalanceTest(){
@@ -45,7 +46,8 @@ public class GiftCardPageTest extends GiftCardsPage {
        String actualText = objOfGiftCardPage.birthdays();
        Assert.assertEquals(actualText,"Birthdays");
     System.out.println("Birthday Passed");
+*/
 
 }
 
-}
+

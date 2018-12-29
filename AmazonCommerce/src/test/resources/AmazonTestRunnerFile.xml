@@ -16,9 +16,9 @@
 <test name = "Ecommerce Home">
     <classes>
 
-        <!--<class name="test.pageobjects.AcocuntListTesting"/>-->
-        <class name="test.pageobjects.LoginPageTest"/>
-        <!--<class name="test.pageobjects.AmazonTesting"/>-->
+
+        <!--<class name="test.pageobjects.GiftCardPageTest"/>-->
+        <class name="test.pageobjects.AmazonTesting"/>
         <!--<class name="test.pageobjects.AmazonShoeListTesting"/>-->
         <!--<class name="test.pageobjects.FooterListTesting"/>-->
         <!--<class name="test.pageobjects.GiftCardPageTest"/>-->

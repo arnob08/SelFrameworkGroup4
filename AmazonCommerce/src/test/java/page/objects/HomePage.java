@@ -10,17 +10,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class HomePage extends ApplicationPageBase {
-
+ApplicationPageBase objOfApplicationPageBase;
     private WebDriver driver;
 
     @FindBy(how = How.ID, using = "search_query_top")
-    private WebElement searchBox;
+    public WebElement searchBox;
 
     @FindBy(how = How.PARTIAL_LINK_TEXT, partialLinkText = "Contact us")
-    private WebElement contactUs;
+    public WebElement contactUs;
 
     @FindBy(how = How.PARTIAL_LINK_TEXT, partialLinkText = "Sign in")
-    private WebElement signInButton;
+    public WebElement signInButton;
 
     /*public HomePage() {
         super(BrowserDriver.getUrl());
@@ -34,7 +34,7 @@ public class HomePage extends ApplicationPageBase {
     }*/
     public LoginPage getLogInPage() {
 
-        signInButton.click();
+       objOfApplicationPageBase.click(signInButton,"Sign In Button");
         return new LoginPage();
     }
 

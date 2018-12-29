@@ -10,16 +10,16 @@ import java.util.List;
 public class AmazonShoesPage extends ApplicationPageBase {
 
 @FindBy(xpath = "//*[@id=\"sort\"]")
-private WebElement sortList;
+public WebElement sortList;
 
 @FindBy(xpath = "//*[@id=\"sort\"]/option[2]")
-private WebElement sortListLowToHigh;
+public WebElement sortListLowToHigh;
 
 @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[1]/span/span/div/label/input")
-private WebElement checkTopBrandsBox;
+public WebElement checkTopBrandsBox;
 
 @FindBy(xpath = "//*[@id=\"sort\"]")
-private List<WebElement> sortListLinks;
+public List<WebElement> sortListLinks;
 
 public void shoeListSort(){
     sortList.click();

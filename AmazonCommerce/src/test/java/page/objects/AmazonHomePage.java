@@ -12,38 +12,41 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.security.Key;
+
 public class AmazonHomePage extends ApplicationPageBase {
 
+    ApplicationPageBase objOfApplictionPageBase;
 
     @FindBy(how = How.CLASS_NAME, using = "nav-line-2")
-    private WebElement orders;
+    public WebElement orders;
 
     @FindBy(xpath = "//*[@id=\"twotabsearchtextbox\"]")
-    private WebElement search;
+    public WebElement search;
 
     @FindBy(how = How.ID, using = "nav-your-amazon")
-    private WebElement yourAmzon;
+    public WebElement yourAmzon;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-xshop\"]/a[2]")
-    private WebElement lastMinuteDeal;
+    public WebElement lastMinuteDeal;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"nav-xshop\"]/a[3]")
-    private WebElement giftCards;
+    public WebElement giftCards;
 
     @FindBy(xpath = "//*[@id=\"nav-link-accountList\"]/span[2]")
-    private WebElement accountList;
+    public WebElement accountList;
 
     @FindBy(xpath = "//*[@id=\"nav-logo\"]/a[1]/span[1]")
-    private WebElement logoDisplay;
+    public WebElement logoDisplay;
 
     @FindBy(xpath = "//*[@id=\"nav-upnav\"]/a")
-    private WebElement topLogoDisplay;
+    public WebElement topLogoDisplay;
 
     @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[5]")
-    private WebElement registry;
+    public WebElement registry;
 
     @FindBy(xpath = "//*[@id=\"a-autoid-0-announce\"]")
-    private WebElement signIn;
+    public WebElement signIn;
 
     public String contactUs() {
 
@@ -55,27 +58,27 @@ public class AmazonHomePage extends ApplicationPageBase {
 
     public void orders() {
 
-        orders.click();
+        objOfApplictionPageBase.click(orders,"Orders");
     }
 
 
     public String lastMinuteDael() {
-        String dealText = lastMinuteDeal.getText();
+        String dealText = objOfApplictionPageBase.getText(lastMinuteDeal,"Last minute Deal");
         return dealText;
     }
 
     public void clickLastMinuteDeal() {
 
-        lastMinuteDeal.click();
+        objOfApplictionPageBase.click(lastMinuteDeal,"Last Minute Deal");
     }
 
 
     public void clickGiftCards() {
-        giftCards.click();
+       objOfApplictionPageBase.click(giftCards,"gift card"); ;
     }
 
     public String giftCards() {
-        String giftText = giftCards.getText();
+        String giftText = objOfApplictionPageBase.getText(giftCards,"gift Card");
         return giftText;
 
     }
@@ -106,7 +109,7 @@ public class AmazonHomePage extends ApplicationPageBase {
     }
 
 public void searchItem(){
-        search.sendKeys("shoes", Keys.ENTER);
+        search.sendKeys("shoe",Keys.ENTER);
 
 
 

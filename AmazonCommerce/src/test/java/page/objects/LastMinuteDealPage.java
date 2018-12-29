@@ -8,18 +8,19 @@ import org.openqa.selenium.support.How;
 
 public class LastMinuteDealPage extends ApplicationPageBase {
 
+    ApplicationPageBase objOfApplicationPageBase;
 
     @FindBy(how =How.CLASS_NAME,using = "a-section")
-    private WebElement amazonProducts;
+    public WebElement amazonProducts;
 
     @FindBy(how=How.XPATH, using = "//*[@id=\"widgetFilters\"]/div/div[3]/div[3]/span/a/div/div[2]/span")
-    private WebElement furnitures;
+    public WebElement furnitures;
 
     @FindBy(xpath = "//*[@id=\"widgetFilters\"]/div/div[3]/div[5]/span/a/div/div[2]/span")
-    private WebElement kitchen;
+    public WebElement kitchen;
 
     @FindBy(xpath = "//*[@id=\"widgetFilters\"]/div/div[3]/div[6]/span/a/div/div[2]/span")
-    private WebElement electronics;
+    public WebElement electronics;
 
     public String amazonProducts(){
 
@@ -30,17 +31,17 @@ public class LastMinuteDealPage extends ApplicationPageBase {
 
 public String furnitures(){
 
-        String getText = furnitures.getText();
+        String getText = objOfApplicationPageBase.getText(furnitures,"Furniture");
         return getText;
 }
 public String kitchen(){
-      String getText = kitchen.getText();
+      String getText = objOfApplicationPageBase.getText(kitchen,"Kitchen");
       return getText;
 
 }
 
  public String electronics(){
-        String getText = electronics.getText();
+        String getText = objOfApplicationPageBase.getText(electronics,"Electronics");
         return getText;
  }
 
