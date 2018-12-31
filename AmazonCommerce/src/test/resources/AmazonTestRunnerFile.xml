@@ -18,8 +18,8 @@
 
 
         <!--<class name="test.pageobjects.GiftCardPageTest"/>-->
-        <class name="test.pageobjects.AmazonTesting"/>
-        <!--<class name="test.pageobjects.AmazonShoeListTesting"/>-->
+        <!--<class name="test.pageobjects.AutomatedItemSearchTest"/>-->
+        <class name="test.pageobjects.signInTest"/>
         <!--<class name="test.pageobjects.FooterListTesting"/>-->
         <!--<class name="test.pageobjects.GiftCardPageTest"/>-->
 

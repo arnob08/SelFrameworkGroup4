@@ -1,6 +1,7 @@
 package application.page.base;
 
 import base.BrowserDriver;
+import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import reporting.TestLogger;
@@ -13,10 +14,10 @@ import java.util.Properties;
 
 public  class ApplicationPageBase extends BrowserDriver {
     /*
-    * @author Jahidul Islam
-    * All commonly used helper methods should be created here
-    *
-    * */
+     * @author Jahidul Islam
+     * All commonly used helper methods should be created here
+     *
+     * */
     String pageUrl;
 
 
@@ -33,13 +34,16 @@ public  class ApplicationPageBase extends BrowserDriver {
         TestLogger.log("Keys Sent to " + webElementName);
     }
 
+
+
+
     public static String getText(WebElement webElement, String webElementName){
 
         TestLogger.log("Getting Text from " + webElementName);
-      String actualText =  webElement.getText();
-      TestLogger.log("Actual text: " + actualText);
+        String actualText =  webElement.getText();
+        TestLogger.log("Actual text: " + actualText);
 
-      return actualText;
+        return actualText;
 
     }
     public static void click(WebElement webElement, String webElementName){

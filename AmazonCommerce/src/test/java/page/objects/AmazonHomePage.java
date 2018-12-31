@@ -48,6 +48,9 @@ public class AmazonHomePage extends ApplicationPageBase {
     @FindBy(xpath = "//*[@id=\"a-autoid-0-announce\"]")
     public WebElement signIn;
 
+    @FindBy(xpath = "//*[@id=\"nav-search\"]/form/div[2]/div/input")
+    public WebElement searchButton;
+
     public String contactUs() {
 
         String getText = yourAmzon.getText();
@@ -115,10 +118,19 @@ public void searchItem(){
 
 
 }
-public void registry(){
-        registry.click();
+public AmazonHomePage automatedSearch(String item){
+
+       sendKeys(search,"search",item);
+        click(searchButton,"Search Button");
+        return new AmazonHomePage();
+}
+
+public void clickSearchButton(){
+
+        click(searchButton,"Search Button");
+}
 }
 
 
 
-}
+

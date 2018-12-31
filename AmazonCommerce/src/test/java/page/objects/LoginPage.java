@@ -21,13 +21,10 @@ public class LoginPage extends ApplicationPageBase {
     public WebElement submitButton;
 
     public LoginPage login(String email, String password){
-
-        sendKeys(emailBox, "emailBox",email);
-        sendKeys(passwordBox,"passwordBox", password);
-        click(submitButton,"submitButton");
-
+        sendKeys(emailBox,"emailbox",email);
+        sendKeys(passwordBox,"password box",password);
+        click(submitButton,"Submit Button");
         return new LoginPage();
-
     }
 
 
