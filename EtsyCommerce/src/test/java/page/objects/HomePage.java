@@ -22,6 +22,12 @@ public class HomePage extends BrowserDriver {
     @FindBy(id = "register")
     private WebElement registerButton;
 
+    @FindBy(id = "sell-on-etsy")
+    private WebElement sellButton;
+
+    @FindBy(css = ".discovery > a:nth-child(1)")
+    private WebElement discoverButton;
+
     public void search () {
         searchBox.sendKeys("dunder mifflin hat", Keys.ENTER);
     }
@@ -37,8 +43,15 @@ public class HomePage extends BrowserDriver {
     }
 
     public void register (){
-
         registerButton.click();
+    }
+
+    public void sell (){
+        sellButton.click();
+    }
+
+    public void discover(){
+        discoverButton.click();
     }
 
 }
@@ -62,10 +75,3 @@ public class HomePage extends BrowserDriver {
 
 
 
-
-/*public HomePage() {
-      // BrowserDriver.getUrl());
-       // this.driver=BrowserDriver.getDriver();
-        PageFactory.initElements(driver, this);
-    }
-*/

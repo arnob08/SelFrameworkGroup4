@@ -33,4 +33,14 @@ public class HomePageTest extends HomePage {
     public void registerTest(){
         objOfHomePage.register();
     }
+
+    @Test
+    public void sellTest(){
+        objOfHomePage.sell();
+    }
+
+    @Test
+    public void discoverTest(){
+        objOfHomePage.discover();
+    }
 }
