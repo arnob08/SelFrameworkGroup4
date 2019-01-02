@@ -32,7 +32,7 @@ AmazonHomePage objOfAmazonHomePage;
 @Test(dataProvider = "dp")
     public void automatedItemsearch(String item){
     objOfAmazonHomePage.automatedSearch(item);
-    objOfAmazonHomePage.clickSearchButton();
+    //objOfAmazonHomePage.clickSearchButton();
 
 }
 

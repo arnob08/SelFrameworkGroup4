@@ -129,6 +129,43 @@ public void clickSearchButton(){
 
         click(searchButton,"Search Button");
 }
+
+public void searchShirts(){
+   sendKeys(search,"search","Shirt");
+    click(searchButton,"Search Button");
+
+}
+
+public void searchDogCollars(){
+        sendKeys(search,"search","Dog Collar");
+        click(searchButton,"Search Button");
+}
+
+public AmazonHomePage iphoneAutomatedSearch(String item){
+
+        sendKeys(search,"search",item);
+        click(searchButton,"Search Button");
+        return new AmazonHomePage();
+}
+
+public void babyToys(){
+        sendKeys(search,"search","Baby toys");
+        click(searchButton,"Search Button");
+}
+
+public void bat(){
+        sendKeys(search,"search","bat");
+        click(searchButton,"search Button");
+}
+    public void book(){
+        sendKeys(search,"search","book");
+        click(searchButton,"search Button");
+    }
+
+    public void cap(){
+        sendKeys(search,"search","cap");
+        click(searchButton,"search Button");
+    }
 }
 
 

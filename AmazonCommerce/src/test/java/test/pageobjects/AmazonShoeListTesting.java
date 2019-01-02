@@ -23,12 +23,12 @@ public class AmazonShoeListTesting extends AmazonShoesPage {
         objOfAmazonHomePage.searchItem();
         objOfAmazonShoesPage.shoeListSort();
     }
-@Test
+    /*@Test
     public void checkTopBrandBoxTest(){
         objOfAmazonHomePage.searchItem();
         objOfAmazonShoesPage.checkTopBrandsBox();
 }
-
+*/
     @Test
     public void sortLinktest(){
         objOfAmazonHomePage.searchItem();

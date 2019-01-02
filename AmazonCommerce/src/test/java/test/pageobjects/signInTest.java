@@ -26,20 +26,10 @@ public class signInTest extends AmazonSignIn {
 
     }
 
-    @DataProvider(name = "DP")
-    public Object[][] getTestData() throws Exception {
-        File filepath = new File(System.getProperty("user.dir") + "/testData/mydata.xlsx");
-        MyDataReader dr = new MyDataReader();
-        //Show me where is data file
-        dr.setExcelFile(filepath.getAbsolutePath());
-
-        String[][] data = dr.getExcelSheetData("Sheet1");
-        return data;
-    }
 
     @DataProvider(name = "DP2")
     public Object[][] getTestdata2() throws Exception {
-        File filepath = new File(System.getProperty("user.dir") + "/testData/mydata.xlsx");
+        File filepath = new File(System.getProperty("user.dir") + "/testData/myData.xlsx");
         MyDataReader dr = new MyDataReader();
         dr.setExcelFile(filepath.getAbsolutePath());
         String[][] data = dr.getExcelSheetData("Sheet1");
@@ -51,9 +41,9 @@ public class signInTest extends AmazonSignIn {
     public void signTest(String email, String password, String errorMessage) {
         objOfAmazonSignIn.tempt();
         objOfAmazonSignIn.sendData(email, password);
-        //   String actualText = objOfAmazonSignIn.errormsg();
-        // String expectedText = errorMessage;
-        //   Assert.assertEquals(actualText,errorMessage);
+        String actualText = objOfAmazonSignIn.errormsg();
+         String expectedText = errorMessage;
+          Assert.assertEquals(actualText,expectedText);
     }
 
 /*
@@ -92,11 +82,11 @@ public class signInTest extends AmazonSignIn {
 
             objOfAmazonSignIn.sendData(cell.get(0).toString(), cell.get(1).toString());
 
-         /*  String expectedText = cell.get(2).toString();
+            String expectedText = cell.get(2).toString();
 
             String actulText = objOfAmazonSignIn.errormsg();
             Assert.assertEquals(actulText, expectedText);
-*/
+
         }
 
 
