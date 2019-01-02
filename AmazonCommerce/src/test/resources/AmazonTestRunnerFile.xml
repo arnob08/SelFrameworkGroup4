@@ -23,16 +23,17 @@
         <class name="test.pageobjects.AmazonBookTest"/>
         <class name="test.pageobjects.AmazonCapTest"/>
         <class name="test.pageobjects.AmazonDogCollarTest"/>
-        <!--<class name="test.pageobjects.AmazonLastMinDealTesting"/>-->
+        <class name="test.pageobjects.AmazonLastMinDealTesting"/>
         <class name="test.pageobjects.AmazonShirtPageTesting"/>
         <class name="test.pageobjects.AmazonTesting"/>
         <class name="test.pageobjects.AutomatedIphoneTest"/>
         <class name="test.pageobjects.AutomatedItemSearchTest"/>
         <class name="test.pageobjects.FooterListTesting"/>
         <class name="test.pageobjects.GiftCardPageTest"/>
+        <class name="test.pageobjects.AmazonShoeListTesting"/>
         <class name="test.pageobjects.signInTest"/>
         <class name="test.pageobjects.LoginPageTest"/>
-        <class name="test.pageobjects.AmazonShoeListTesting"/>
+
     </classes>
 
 

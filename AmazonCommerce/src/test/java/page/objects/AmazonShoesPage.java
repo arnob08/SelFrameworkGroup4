@@ -22,8 +22,8 @@ public WebElement checkTopBrandsBox;
 public List<WebElement> sortListLinks;
 
 public void shoeListSort(){
-    sortList.click();
-    sortListLowToHigh.click();
+    click(sortList,"sort list");
+    click(sortListLowToHigh,"Low To High");
 }
 
 public void checkTopBrandsBox(){
