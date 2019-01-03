@@ -41,7 +41,7 @@ public  class ApplicationPageBase extends BrowserDriver {
 
         public static Properties loadProperties() throws IOException {
             Properties prop = new Properties();
-            File filepath = new File(System.getProperty("user.dir") +  "/src/test/resources/secret.properties");
+            File filepath = new File(System.getProperty("user.dir") +  "/testData/TestData.xlsx");
             InputStream ism = new FileInputStream(filepath.getAbsoluteFile());
             prop.load(ism);
             ism.close();

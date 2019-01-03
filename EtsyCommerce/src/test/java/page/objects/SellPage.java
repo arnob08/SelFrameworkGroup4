@@ -23,11 +23,11 @@ public class SellPage extends ApplicationPageBase {
     }
 
     public void getFaqs(){
-        faqButton.click();
+        click(faqButton,"faqButton");
     }
 
     public void support(){
-        supportButton.click();
+        click(supportButton,"supportButton");
     }
 
     public String talkToUsMsg(){

@@ -26,7 +26,6 @@ public class RegisterPage extends ApplicationPageBase {
     private WebElement registerButton;
 
 //    public void enterEmail (){
-//
 //        Set<String> handles = driver.getWindowHandles();
 //        String currentHandle = driver.getWindowHandle();
 //        for (String handle : handles) {
@@ -49,9 +48,6 @@ public class RegisterPage extends ApplicationPageBase {
         sendKeys(firstNameBox,"firstNameBox", firstName);
         sendKeys(passwordBox, "passwordBox", password);
         click(registerButton, "registerButton");
-
-
-
     }
 
 //    public void enterFirstName (){

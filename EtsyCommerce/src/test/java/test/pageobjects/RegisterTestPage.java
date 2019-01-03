@@ -23,11 +23,11 @@ public class RegisterTestPage extends ApplicationPageBase {
 
     @DataProvider(name="DP")
     public Object[][] getTestData() throws Exception{
-        File filepath = new File(System.getProperty("C:\\Users\\Marzana\\Desktop\\PIIT\\Selenium\\SelFrameworkGroup4\\EtsyCommerce\\testData\\TestData.xlsx"));
+        File filepath = new File(System.getProperty("user.dir") +  "/testData/TestData.xlsx");
         MyDataReader dr = new MyDataReader();
         //Show me where is data file
         dr.setExcelFile(filepath.getAbsolutePath());
-        String[][] data = dr.getExcelSheetData("Sheet3");
+        String[][] data = dr.getExcelSheetData("Sheet4");
         return data;
     }
 

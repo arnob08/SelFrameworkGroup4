@@ -37,7 +37,7 @@
                 <version>2.20.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suitexmlFile>target/test-classes/EcommerceTestRunnerFile.xml</suitexmlFile>
+                        <suitexmlFile>target/test-classes/EtsyTestRunnerFile.xml</suitexmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
