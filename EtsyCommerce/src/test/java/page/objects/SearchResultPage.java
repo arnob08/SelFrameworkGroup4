@@ -18,5 +18,4 @@ public class SearchResultPage extends BrowserDriver {
     public void selectHat (){
         hat.click();
     }
-
 }

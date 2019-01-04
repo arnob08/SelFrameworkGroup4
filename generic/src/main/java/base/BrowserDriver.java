@@ -72,7 +72,7 @@ public class BrowserDriver {
         if (result.getStatus() == ITestResult.FAILURE) {
             captureScreenshot(driver, result.getName());
         }
-        driver.quit();
+//        driver.quit();
     }
     @AfterSuite
     public void generateReport() {
@@ -157,7 +157,7 @@ public class BrowserDriver {
     @AfterMethod
     public void closeOut() {
         //driver.manage().deleteAllCookies();
-        driver.quit();
+//        driver.quit();
     }
 
     public static void captureScreenshot(WebDriver driver, String screenshotName){
