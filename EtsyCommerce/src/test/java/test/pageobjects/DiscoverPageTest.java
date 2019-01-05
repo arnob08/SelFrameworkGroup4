@@ -30,12 +30,14 @@ public class DiscoverPageTest extends ApplicationPageBase {
     public void cleverUtilityTest(){
         objOfHomePage.discover();
         objOfDiscoverPage.setCleverUtility();
+        Assert.assertTrue(objOfDiscoverPage.getCleverUtility().isDisplayed());
     }
 
     @Test
     public void winterPastelsTest(){
         objOfHomePage.discover();
         objOfDiscoverPage.setWinterPastels();
+        Assert.assertTrue(objOfDiscoverPage.getWinterPastels().isDisplayed());
     }
 
 }

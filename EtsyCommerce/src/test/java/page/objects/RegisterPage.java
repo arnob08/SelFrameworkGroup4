@@ -25,16 +25,8 @@ public class RegisterPage extends ApplicationPageBase {
     @FindBy(xpath = "//button[contains(text(),'Register')]")
     private WebElement registerButton;
 
-//    public void enterEmail (){
-//        Set<String> handles = driver.getWindowHandles();
-//        String currentHandle = driver.getWindowHandle();
-//        for (String handle : handles) {
-//            if (!handle.equals(currentHandle)) {
-//                driver.switchTo().window(handle);
-//            }
-//        }
-//        email.sendKeys("tester123@gmail.com",Keys.ENTER);
-//    }
+    @FindBy(partialLinkText = "Register")
+    private WebElement verifyRegisterPage;
 
     public void register (String email, String firstName, String password){
         Set<String> handles = driver.getWindowHandles();
@@ -50,24 +42,7 @@ public class RegisterPage extends ApplicationPageBase {
         click(registerButton, "registerButton");
     }
 
-//    public void enterFirstName (){
-//        WebDriverWait wait = new WebDriverWait(driver, 30);
-//        WebElement element = wait.until(
-//                ExpectedConditions.visibilityOfElementLocated(By.id("join_neu_first_name_field")));
-//        firstName.sendKeys("tester", Keys.ENTER);
-//    }
-//
-//    public void enterPassword (){
-//        WebDriverWait wait = new WebDriverWait(driver, 90);
-//        WebElement element = wait.until(
-//                ExpectedConditions.visibilityOfElementLocated(By.id("join_neu_password_field")));
-//        password.sendKeys("#set123secretPassword", Keys.ENTER);
-//    }
-//
-//    public void clickRegister (){
-//        WebDriverWait wait = new WebDriverWait(driver, 90);
-//        WebElement element = wait.until(
-//                ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),'Register')]")));
-//        registerButton.click();
-//    }
+    public WebElement getVerifyRegisterPage(){
+        return verifyRegisterPage;
+    }
 }

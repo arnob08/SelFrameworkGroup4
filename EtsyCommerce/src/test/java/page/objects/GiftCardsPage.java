@@ -33,31 +33,28 @@ public class GiftCardsPage extends ApplicationPageBase {
     @FindBy(id = "js-add-to-cart")
     private WebElement addToCart;
 
+    @FindBy(partialLinkText = "Keep shopping")
+    private WebElement verifyAddToCartButton;
+
     public String giftCardMsg(){
         String msg = getText(giveTheGiftOfEtsy,"giveTheGiftOfEtsy");
         return msg;
     }
 
     public void buyGiftCard (String to,String from,String note, String email){
-
         sendKeys(toBox, "toBox", to);
         sendKeys(fromBox, "fromBox", from);
-
-        TestLogger.log("Choosing an amount");
-        WebElement element = driver.findElement(By.id("gift-card-amount-0"));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(element).click().build().perform();
+        moveToElement(moneyAmount,"moneyAmount");
         TestLogger.log("Chose $25 for the amount");
-
         sendKeys(noteBox,"noteBox", note);
-
-        TestLogger.log("Choosing a delivery method");
-        WebElement ele = driver.findElement(By.id("medium-email"));
-        Actions act = new Actions(driver);
-        act.moveToElement(ele).click().build().perform();
+        moveToElement(deliveryMethod, "deliveryMethod");
         TestLogger.log("Chose email for delivery method");
-
         sendKeys(emailBox,"emailBox", email);
         click(addToCart,"addToCart");
     }
+
+    public WebElement getVerifyAddToCartButton(){
+        return verifyAddToCartButton;
+    }
+
 }

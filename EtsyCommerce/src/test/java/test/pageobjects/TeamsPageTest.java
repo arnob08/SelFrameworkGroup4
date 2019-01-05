@@ -44,6 +44,8 @@ public class TeamsPageTest extends ApplicationPageBase {
     public void subscribeTest(String email){
         objOfFooterPage.goToTeams();
         objOfTeamsPage.subscribe(email);
+        Assert.assertTrue(objOfTeamsPage.getVerifySubscribe().isDisplayed());
     }
+
 }
 

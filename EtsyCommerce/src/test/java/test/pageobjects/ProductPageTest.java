@@ -20,13 +20,19 @@ public class ProductPageTest extends ProductPage {
         objOfProductPage = PageFactory.initElements(driver, ProductPage.class);
     }
 
+//    @Test
+//    public void selectOptionTest() {
+//        objOfHomePage.search();
+//        objOfSearchResultPage.selectHat();
+//        objOfProductPage.selectOption();
+//        objOfProductPage.selectQuantity();
+//        objOfProductPage.clickCartButton();
+//    }
     @Test
-    public void selectOptionTest() {
+    public void selectTest(){
         objOfHomePage.search();
         objOfSearchResultPage.selectHat();
-        objOfProductPage.selectOption();
-        objOfProductPage.selectQuantity();
-        objOfProductPage.clickCartButton();
+        objOfProductPage.select();
     }
 }
 

@@ -3,6 +3,7 @@ package test.pageobjects;
 import application.page.base.ApplicationPageBase;
 import com.util.xlsx.reader.MyDataReader;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -35,5 +36,6 @@ public class RegisterTestPage extends ApplicationPageBase {
     public void register (String email,String firstName,String password){
         objOfHomePage.register();
         objOfRegisterPage.register(email, firstName, password);
+        Assert.assertTrue(objOfRegisterPage.getVerifyRegisterPage().isDisplayed());
     }
 }

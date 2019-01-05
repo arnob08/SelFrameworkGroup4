@@ -9,11 +9,17 @@ public class DiscoverPage extends ApplicationPageBase {
     @FindBy(css = ".wt-text-heading-02")
     private WebElement message;
 
-    @FindBy (css = "div.wt-mt-xs-5:nth-child(2) > h2:nth-child(1) > a:nth-child(1)")
+    @FindBy (partialLinkText = "Clever utility")
     private WebElement cleverUtility;
 
-    @FindBy(xpath = "/html/body/div[3]/div/div[4]/div/h2/a")
+    @FindBy(partialLinkText = "Winter pastels")
     private WebElement winterPastels;
+
+    @FindBy(partialLinkText = "Clever utility")
+    private WebElement verifyCleverUtility;
+
+    @FindBy(partialLinkText = "Winter pastels")
+    private WebElement verifyWinterPastels;
 
     public String discoverPageMsg(){
         String text = getText(message,"message");
@@ -26,5 +32,13 @@ public class DiscoverPage extends ApplicationPageBase {
 
     public void setWinterPastels(){
         winterPastels.click();
+    }
+
+    public WebElement getCleverUtility(){
+        return verifyCleverUtility;
+    }
+
+    public WebElement getWinterPastels(){
+        return verifyWinterPastels;
     }
 }

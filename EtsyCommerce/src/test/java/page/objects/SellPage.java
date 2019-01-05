@@ -17,6 +17,9 @@ public class SellPage extends ApplicationPageBase {
     @FindBy(xpath = "//h2[text()='Talk to us']")
     private WebElement talkToUsMsg;
 
+    @FindBy(xpath = "//h1[contains(text(),'Frequently Asked Questions')]")
+    private WebElement verifyFaqsPage;
+
     public String sellPageMsg (){
         String text = getText(sellMsg, "sellMsg");
         return text;
@@ -33,5 +36,9 @@ public class SellPage extends ApplicationPageBase {
     public String talkToUsMsg(){
         String text = getText(talkToUsMsg,"talkToUsMsg");
         return text;
+    }
+
+    public WebElement getVerifyFaqsPage(){
+        return verifyFaqsPage;
     }
 }

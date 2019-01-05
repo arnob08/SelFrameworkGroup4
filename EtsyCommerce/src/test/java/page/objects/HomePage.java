@@ -1,6 +1,7 @@
 package page.objects;
 
 
+import application.page.base.ApplicationPageBase;
 import base.BrowserDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,16 +9,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BrowserDriver {
+public class HomePage extends ApplicationPageBase {
 
     @FindBy(id = "etsy-logo")
     private WebElement logo;
 
     @FindBy(id = "search-query")
     private WebElement searchBox;
-
-    @FindBy(id = "catnav-primary-link-66")
-    private WebElement dropDown;
 
     @FindBy(id = "register")
     private WebElement registerButton;
@@ -28,30 +26,64 @@ public class HomePage extends BrowserDriver {
     @FindBy(css = ".discovery > a:nth-child(1)")
     private WebElement discoverButton;
 
-    public void search () {
+    @FindBy(id = "catnav-primary-link-66")
+    private WebElement artAndCollectibles;
+
+    @FindBy(id = "catnav-l3-128")
+    private WebElement sculpture;
+
+    @FindBy(xpath = "//p[contains(text(),'New discoveries')]")
+    private WebElement verifyDiscoverPage;
+
+    @FindBy(partialLinkText = "Open your Etsy shop")
+    private WebElement verifySellPage;
+
+    @FindBy(partialLinkText = "Register")
+    private WebElement verifyRegisterPage;
+
+    @FindBy(partialLinkText = "DUNDER MIFFLIN PAPER Company")
+    private WebElement verifySearchResult;
+
+    public void search() {
         searchBox.sendKeys("dunder mifflin hat", Keys.ENTER);
     }
 
-    public boolean logoVer (){
+    public boolean logoVer(){
         logo.isDisplayed();
         return true;
     }
 
-    public void dropDownFunction (){
-        Actions ele = new Actions(driver);
-        ele.moveToElement(dropDown).build().perform();
+    public void register(){
+        click(registerButton, "registerButton");
     }
 
-    public void register (){
-        registerButton.click();
-    }
-
-    public void sell (){
-        sellButton.click();
+    public void sell(){
+        click(sellButton, "sellButton");
     }
 
     public void discover(){
-        discoverButton.click();
+        click(discoverButton,"discoverButton");
+    }
+
+//    public void selectArtAndCollectibles(){
+//        driver.switchTo().frame("etsy-device-id-iframe");
+//        moveToElementWithSubMenu(artAndCollectibles,sculpture,"artAndCollectibles","sculpture");
+//    }
+
+    public WebElement getVerifyDiscoverPage(){
+        return verifyDiscoverPage;
+    }
+
+    public WebElement getVerifySellPage(){
+        return verifySellPage;
+    }
+
+    public WebElement getVerifyRegisterPage(){
+        return verifyRegisterPage;
+    }
+
+    public WebElement getVerifySearchResult(){
+        return verifySearchResult;
     }
 
 }

@@ -30,6 +30,7 @@ public class SellPageTest extends ApplicationPageBase {
     public void faqsTest(){
         objOfHomePage.sell();
         objOfSellPage.getFaqs();
+        Assert.assertTrue(objOfSellPage.getVerifyFaqsPage().isDisplayed());
     }
 
     @Test

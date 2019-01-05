@@ -95,7 +95,7 @@ public class BrowserDriver {
         getLocalDriver(browserName, os);
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS); // 20
         driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS); //35
-        //driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.get(url);
 
     }

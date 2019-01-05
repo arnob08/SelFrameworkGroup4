@@ -44,6 +44,7 @@ public class GiftCardsPageTest extends ApplicationPageBase {
     public void buyGiftCardTest (String to,String from,String note, String email){
         objOfFooterPage.goToGiftCards();
         objOfGiftCardsPage.buyGiftCard(to,from,note,email);
+        Assert.assertTrue(objOfGiftCardsPage.getVerifyAddToCartButton().isDisplayed());
     }
 
 

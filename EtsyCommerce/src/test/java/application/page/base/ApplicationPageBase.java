@@ -3,6 +3,7 @@ package application.page.base;
 import base.BrowserDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import reporting.TestLogger;
 import java.io.File;
 import java.io.FileInputStream;
@@ -47,6 +48,22 @@ public  class ApplicationPageBase extends BrowserDriver {
             ism.close();
             return prop;
         }
+
+        public static void moveToElement(WebElement webElement, String webElementName){
+            TestLogger.log("Click on " + webElementName );
+            Actions actions = new Actions(driver);
+            actions.moveToElement(webElement).click().build().perform();
+            TestLogger.log("Clicked on " + webElementName);
+        }
+
+        public static void moveToElementWithSubMenu(WebElement webElement, WebElement webElement2, String webElementName, String webElement2Name){
+            Actions action = new Actions(driver);
+            action.moveToElement(webElement).moveToElement(webElement2).click().build().perform();
+            TestLogger.log("Clicked on " + webElementName + ", then clicked on " + webElement2Name);
+        }
+
+
+
 
 
 }
