@@ -40,7 +40,8 @@ public class AmazonSignIn extends ApplicationPageBase {
     @FindBy (xpath = "//*[@id=\"signInSubmit\"]")
     private WebElement siginAllacount;
 
-
+    @FindBy (xpath = "//*[@id=\"auth-captcha-guess\"]")
+    private WebElement capchaBox;
 
 //    public LoginPage login1 (String email, String password) {
 //    sendKeys(emailbox,"emailBox",email);
@@ -74,6 +75,24 @@ public class AmazonSignIn extends ApplicationPageBase {
 
         sendKeys(emailbox,"emailbox",email);
         sendKeys(passwordBox,"passwordBoz",password);
+
+       /* if(siginFailureAlert.isDisplayed())
+
+        {    sendKeys(capchaBox,"Enter capcha values","5432222");
+            click(signinAllacount, "click sign In Buton");
+
+        }
+
+        else{
+            clickButton(signInButton, "click sign In Buton");
+
+        }
+
+
+        return new LogInPage();
+*/
+
+
         click(siginAllacount,"Sign in account");
         return new AmazonSignIn();
 

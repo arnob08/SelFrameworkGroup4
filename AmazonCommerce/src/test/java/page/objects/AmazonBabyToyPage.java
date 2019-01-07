@@ -8,31 +8,31 @@ import org.testng.annotations.Test;
 public class AmazonBabyToyPage extends ApplicationPageBase {
 
 
-    @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[1]/span/ul/div/li[2]/span/a/span")
+    @FindBy(xpath = "//span[text()='Baby & Toddler Toys']")
     private WebElement babyAndToddler;
 
-    @FindBy(xpath ="//*[@id=\"leftNavContainer\"]/ul[1]/div/li[1]/span/ul/div/li[4]/span/a/span")
+    @FindBy(xpath ="//span[text()='Baby Musical Toys']")
     private WebElement musicalToys;
 
-    @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[1]/span/ul/div/li[8]/span/a/span")
+    @FindBy(xpath = "//span[text()='Early Development Activity Centers']")
     private WebElement babyRattler;
 
-    @FindBy(xpath ="//*[@id=\"leftNavContainer\"]/ul[1]/div/li[2]/span/ul/div/li[2]/span/a/span" )
+    @FindBy(xpath ="//span[text()='Baby Teether Toys']" )
     private WebElement babyTeething;
 
-    @FindBy(xpath ="//*[@id=\"leftNavContainer\"]/ul[1]/div/li[2]/span/ul/div/li[4]/span/a" )
+    @FindBy(xpath ="//span[text()='Baby Activity & Entertainment Products']" )
     private WebElement babyEntertainment;
 
-    @FindBy(xpath ="//*[@id=\"leftNavContainer\"]/ul[1]/div/li[2]/span/ul/div/li[6]/span/a/span" )
+    @FindBy(xpath ="//span[text()='Baby Gyms & Playmats']" )
     private WebElement babyGym;
 
-    @FindBy(xpath ="//*[@id=\"leftNavContainer\"]/ul[1]/div/li[2]/span/ul/div/li[8]/span/a/span" )
+    @FindBy(xpath ="//span[text()='Baby Walkers']" )
     private WebElement babyWalker;
 
-    @FindBy(xpath ="//*[@id=\"leftNavContainer\"]/ul[1]/div/li[2]/span/ul/div/li[10]/span/a/span" )
+    @FindBy(xpath ="//span[text()='Baby Bibs']" )
     private WebElement babyBib;
 
-    @FindBy(xpath ="//*[@id=\"leftNavContainer\"]/ul[1]/div/li[2]/span/ul/div/li[12]/span/a/span" )
+    @FindBy(xpath ="//span[text()='Infant Bouncers & Rockers']" )
     private WebElement babyBouncer;
 
 public String babyAndToddlerText(){

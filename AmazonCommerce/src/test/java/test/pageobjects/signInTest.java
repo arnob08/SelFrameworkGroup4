@@ -36,6 +36,15 @@ public class signInTest extends AmazonSignIn {
         return data;
     }
 
+    @DataProvider(name = "googleSheetReader")
+    public Object[][] getDataFromGoogleSheet() throws Exception{
+        Properties properties = loadProperties();
+        String spreadsheetId = properties.getProperty("GOOGLE.spreadsheetId");
+        String range = properties.getProperty("GOOGLE.range");
+        String[][] data = GoogleSheetReader.getSpreadSheetRecordsToSupplyDataProviderAlternativeWay(spreadsheetId,range);
+        return  data;
+    }
+
 
     @Test(dataProvider = "DP2")
     public void signTest(String email, String password, String errorMessage) {
@@ -46,6 +55,14 @@ public class signInTest extends AmazonSignIn {
           Assert.assertEquals(actualText,expectedText);
     }
 
+    @Test(dataProvider = "googleSheetReader")
+    public void invalidGoogleSignIn(String email,String password, String expectedErroMessage){
+        objOfAmazonSignIn.tempt();
+        objOfAmazonSignIn.sendData(email,password);
+        String expectedText = expectedErroMessage;
+        String actualText = objOfAmazonSignIn.errormsg();
+        Assert.assertEquals(actualText,expectedText);
+    }
 /*
     @Test(dataProvider = "supplyData")
     public void signInTest(String email, String password, String expectedErroMessage) {
@@ -66,7 +83,7 @@ public class signInTest extends AmazonSignIn {
 //        String actualText = objOfAmazonSignIn.errormsg();
 //        Assert.assertEquals(actualText,expectedErroMessage);
 //    }
-
+/*
     @Test
     public void invalidSigninByGoogleSheetApi() throws IOException {
 
@@ -87,8 +104,7 @@ public class signInTest extends AmazonSignIn {
             String actulText = objOfAmazonSignIn.errormsg();
             Assert.assertEquals(actulText, expectedText);
 
-        }
+        }*/
 
 
     }
-}

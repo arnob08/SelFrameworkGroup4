@@ -6,13 +6,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class AmazonCapPage extends ApplicationPageBase {
 
-    @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[1]/span/ul/div/li[2]/span/a/span")
+    @FindBy(css = "span[class='a-size-small a-color-base']")
 private WebElement mensHats;
 
     @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[1]/span/ul/div/li[4]/span/a/span")
     private WebElement mensBeanies;
 
-    @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[1]/span/ul/div/li[6]/span/a/span")
+    @FindBy(xpath = "//span[text()='Surf, Skate & Street Hats & Caps']")
     private WebElement scarfs;
 
     @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[1]/span/ul/div/li[8]/span/a/span")
@@ -33,7 +33,7 @@ private WebElement mensHats;
     @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[4]/span/ul/div/li[4]/span/a/span")
     private WebElement womensNovelty;
 
-    @FindBy(xpath = "//*[@id=\"leftNavContainer\"]/ul[1]/div/li[4]/span/ul/div/li[6]/span/a/span")
+    @FindBy(xpath = "//span[text()='Novelty Clothing']")
     private WebElement noveltyClothes;
 
 

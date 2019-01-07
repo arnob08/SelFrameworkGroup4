@@ -6,37 +6,37 @@ import org.openqa.selenium.support.FindBy;
 
 public class AmazonBookPage extends ApplicationPageBase {
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[1]/a")
+    @FindBy(xpath = "//a[text()='Award Winners']")
     private WebElement awardWinners;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[2]/a")
+    @FindBy(xpath = "//a[text()='Bargain Books']")
     private WebElement bargainBooks;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[3]/a")
+    @FindBy(xpath = "//a[text()='Fall Reading']")
     private WebElement fallReading;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[4]/a")
+    @FindBy(xpath = "//a[text()='Best Books of the Month']")
     private WebElement bookOfTheMonth;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[5]/a")
+    @FindBy(xpath = "//a[text()='Best Books of the Year']")
     private WebElement bookOfTheYear;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[6]/a")
+    @FindBy(xpath = "//a[text()='Celebrity Picks']")
     private WebElement celebrityPicks;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[7]/a")
+    @FindBy(xpath = "//a[text()='Books in Spanish']")
     private WebElement booksOfSpanish;
 
     @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[8]/a")
     private WebElement childrensBooks;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[9]/a")
+    @FindBy(xpath = "//a[text()='Deals in Books']")
     private WebElement dealsInBooks;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[10]/a")
+    @FindBy(xpath = "//a[text()='Prime Book Box']")
     private WebElement primeBook;
 
-    @FindBy(xpath = "//*[@id=\"a-page\"]/div[4]/div/div[2]/div/div[1]/div[1]/ul[1]/li[11]/a")
+    @FindBy(xpath = "//a[text()='Top 20 Lists in Books']")
     private WebElement top20Books;
 
 

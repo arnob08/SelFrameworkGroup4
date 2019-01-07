@@ -47,6 +47,16 @@ public class LoginPageTest extends ApplicationPageBase {
         return data;
     }
 
+@DataProvider(name = "googleSheetReader")
+    public Object[][] getDataFromGoogleSheet() throws Exception{
+       Properties properties = loadProperties();
+       String spreadsheetId = properties.getProperty("GOOGLE.spreadsheetId");
+       String range = properties.getProperty("GOOGLE.range");
+       String[][] data = GoogleSheetReader.getSpreadSheetRecordsToSupplyDataProviderAlternativeWay(spreadsheetId,range);
+       return  data;
+}
+
+
 
 
     @Test(dataProvider = "DP")
