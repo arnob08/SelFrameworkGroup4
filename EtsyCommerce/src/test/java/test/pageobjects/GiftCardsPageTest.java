@@ -40,6 +40,7 @@ public class GiftCardsPageTest extends ApplicationPageBase {
         return data;
     }
 
+
     @Test(dataProvider = "DP")
     public void buyGiftCardTest (String to,String from,String note, String email){
         objOfFooterPage.goToGiftCards();

@@ -45,8 +45,11 @@ public class HomePageTest extends HomePage {
         Assert.assertTrue(objOfHomePage.getVerifyDiscoverPage().isDisplayed());
     }
 
-//    @Test
-//    public void selectArtAndCollectiblesTest(){
-//        objOfHomePage.selectArtAndCollectibles();
-//    }
+    @Test
+    public void selectArtAndCollectiblesTest(){
+        objOfHomePage.selectArtAndCollectibles();
+        Assert.assertTrue(objOfHomePage.getVerifySculpturePage().isDisplayed());
+    }
 }
+
+

@@ -1,6 +1,7 @@
 package test.pageobjects;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.objects.HomePage;
@@ -20,19 +21,12 @@ public class ProductPageTest extends ProductPage {
         objOfProductPage = PageFactory.initElements(driver, ProductPage.class);
     }
 
-//    @Test
-//    public void selectOptionTest() {
-//        objOfHomePage.search();
-//        objOfSearchResultPage.selectHat();
-//        objOfProductPage.selectOption();
-//        objOfProductPage.selectQuantity();
-//        objOfProductPage.clickCartButton();
-//    }
     @Test
     public void selectTest(){
         objOfHomePage.search();
         objOfSearchResultPage.selectHat();
         objOfProductPage.select();
+        Assert.assertTrue(objOfProductPage.getVerifyCartPage().isDisplayed());
     }
 }
 

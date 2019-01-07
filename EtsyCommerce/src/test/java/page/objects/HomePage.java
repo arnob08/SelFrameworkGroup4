@@ -8,6 +8,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class HomePage extends ApplicationPageBase {
 
@@ -31,6 +33,9 @@ public class HomePage extends ApplicationPageBase {
 
     @FindBy(id = "catnav-l3-128")
     private WebElement sculpture;
+
+    @FindBy(xpath = "//h1[text()='Sculpture']")
+    private WebElement verifySculpturePage;
 
     @FindBy(xpath = "//p[contains(text(),'New discoveries')]")
     private WebElement verifyDiscoverPage;
@@ -65,10 +70,13 @@ public class HomePage extends ApplicationPageBase {
         click(discoverButton,"discoverButton");
     }
 
-//    public void selectArtAndCollectibles(){
-//        driver.switchTo().frame("etsy-device-id-iframe");
-//        moveToElementWithSubMenu(artAndCollectibles,sculpture,"artAndCollectibles","sculpture");
-//    }
+    public void selectArtAndCollectibles(){
+        TestLogger.log("Select Art & Collectibles");
+        Actions actions = new Actions(driver);
+        actions.moveToElement(artAndCollectibles).build().perform();
+        TestLogger.log("Selected Art & Collectibles");
+        click(sculpture,"sculpture");
+    }
 
     public WebElement getVerifyDiscoverPage(){
         return verifyDiscoverPage;
@@ -86,6 +94,9 @@ public class HomePage extends ApplicationPageBase {
         return verifySearchResult;
     }
 
+    public WebElement getVerifySculpturePage(){
+        return verifySculpturePage;
+    }
 }
 
 

@@ -29,13 +29,7 @@ public class RegisterPage extends ApplicationPageBase {
     private WebElement verifyRegisterPage;
 
     public void register (String email, String firstName, String password){
-        Set<String> handles = driver.getWindowHandles();
-        String currentHandle = driver.getWindowHandle();
-        for (String handle : handles) {
-            if (!handle.equals(currentHandle)) {
-                driver.switchTo().window(handle);
-            }
-        }
+        switchWindowHandle();
         sendKeys(emailBox, "emailBox", email);
         sendKeys(firstNameBox,"firstNameBox", firstName);
         sendKeys(passwordBox, "passwordBox", password);
